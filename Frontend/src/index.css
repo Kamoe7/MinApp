@@ -1,0 +1,128 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html,body,#root{
+  height: 100%;
+  width: 100%;
+}
+
+.login-container{
+  background-image: url(https://storage.123fakturera.se/public/wallpapers/sverige43.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+
+.nav-links{
+  display:flex;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li{
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-links img{
+  width: 22px;
+  height: auto;
+}
+
+.login-box{
+  background-color: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+.login-box h1{
+  color: pink;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+.input-group label{
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+
+}
+
+.input-group input{
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-btn{
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 0px;
+  width: 50%;
+  font-size:16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.links a{
+  text-decoration: none;
+  font-size: 14px;
+  color:#222;
+
+}
+
+
+footer{
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+}
+
+footer p{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left;
+}
+
+footer span{
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+} */
+
+

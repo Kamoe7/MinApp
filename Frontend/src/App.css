@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif !important;
+  outline: none !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  border: 0;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100svh;
+    padding-bottom: 10rem;
+  
+}
+
+.html{
+    height: 100%;
+}
+
+
+.background{
+  position:fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}
+
+.bg-img{
+  width: 100%;
+  min-height: 100%;
+  background-image: url(https://storage.123fakturera.se/public/wallpapers/sverige43.jpg);
+  object-fit: cover;
+  object-position: center center;
+  z-index: -10;
+  transform: translateZ(0px);
+  backface-visibility: hidden;
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+
+
+@media (min-width: 1390px) and (max-width: 1589px) and (orientation: landscape) {
+  body {
+    padding-bottom: 119px;
+  }
+}
+
+@media (min-width: 1590px) and (max-width: 1909px) and (orientation: landscape) {
+  body {
+    padding-bottom: 123px;
+  }
+}
+
+@media (min-width: 1910px) and (max-width: 2549px) and (orientation: landscape) {
+  body {
+    padding-bottom: 126px;
+  }
+}
+
+@media (min-width: 2550px) and (max-width: 3429px) and (orientation: landscape) {
+  body {
+    padding-bottom: 135px;
+  }
+}

@@ -1,0 +1,145 @@
+.login-box {
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+
+} 
+
+.login-box h1{
+    font-size: 2.5rem;
+    color: #ff0000;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.025rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+.input-group label{
+  font-size: 17px;
+  font-weight: 490;
+  color: #242222;
+
+}
+
+.input-group input{
+  width: 100%;
+  padding: 18px 16px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  
+}
+
+.login-btn{
+  background-color: #03a33e;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  padding: 18px 0px;
+  width: 70%;
+  font-size:16px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.links  {
+    display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  
+
+}
+
+.links a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+@media (min-width:1025px) {
+    .login-box{
+   
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+
+
+}
+
+.login-box h1{
+    color: red;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+.input-group label{
+  font-size: 15px;
+  font-weight: 500;
+  color: #242222;
+
+}
+
+.input-group input{
+  width: 100%;
+  padding: 16px 16px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+  
+}
+
+.login-btn{
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 0px;
+  width: 50%;
+  font-size:14px;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.links {
+  text-decoration: none;  
+  margin-top: 10px;
+  display: flex; 
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+
+}
+
+
+}
