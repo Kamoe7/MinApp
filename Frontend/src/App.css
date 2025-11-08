@@ -44,8 +44,15 @@ body{
   height: auto;
   background-size: cover;
 }
+/* 
+.main-content {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
 
-
+} */
 
 @media (min-width: 1390px) and (max-width: 1589px) and (orientation: landscape) {
   body {

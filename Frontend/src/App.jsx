@@ -17,7 +17,7 @@ function App() {
           </div>
 
      <Navbar/>
-    {/* <main className='main-content'><LoginBox/></main> */}
+    <LoginBox/>
     
     <Footer/>
 
