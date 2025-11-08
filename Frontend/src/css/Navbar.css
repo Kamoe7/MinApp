@@ -306,7 +306,7 @@ img {
   }
 }
 
-@media (min-width:2000px) {
+@media (min-width:200px) {
   .menu-list {
     font-size: 18px;
   }

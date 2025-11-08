@@ -1,0 +1,296 @@
+
+.terms-content {
+     padding-bottom: 10px;  /*here adjust the box padding  */
+}
+
+.terms-section {
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    width: 70%;
+    padding-bottom: 0.25rem;  /*bottom padding */
+}
+
+.terms-top-text {
+    margin-bottom: 3rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.terms-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.terms-button {
+    font-size: 1.125rem;
+    border-radius: 3rem;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    background-color: rgb(8, 158, 30);
+    cursor: pointer;
+    border: none;
+    width: 22vw;
+    min-width: max-content;
+    max-width: 270px;
+    transition: background-color 0.3s ease, transform 0,2s ease;
+
+}
+
+/* .terms-button:hover{
+    transform: translateY(2px);
+} */
+
+.terms-button:active {
+    transform:translateY(0)
+}
+
+.terms-table {
+    background:#fff;
+    width: 750px;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: left;
+    transition: width 600ms ease-in-out;
+    padding: 40px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    font-size: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    color: rgba(0,0,0,0.7);
+}
+
+.terms-button-lower {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Mobile */
+        @media (max-width: 674px) {
+          .terms-section {
+            margin-top: 20px;
+            width: 90%;
+          }
+
+          .terms-top-text {
+            margin-bottom: 1.5rem;
+          }
+
+          .terms-button {
+            width: 60%;
+            font-size: 1rem;
+            padding: 0.875rem 2rem;
+          }
+
+          .back-terms {
+            margin-top: 0;
+            max-width: 100%;
+            padding: 30px 20px;
+            font-size: 13px;
+          }
+
+          .terms-button-lower {
+            margin-top: 2rem;
+          }
+
+          .content {
+            padding-bottom: 50px;
+          }
+
+          .head-mob-md {
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+
+        /* Tablet */
+        @media (min-width: 675px) and (max-width: 899px) {
+          .terms-section {
+            width: 90%;
+            margin-top: 40px;
+          }
+
+          .back-terms {
+            max-width: 100%;
+          }
+
+          .terms-button-lower {
+            margin-top: 2.5rem;
+          }
+
+          .content {
+            padding-bottom: 0px;
+          }
+
+          .terms-button {
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 675px) and (max-width: 899px) and (orientation: landscape) {
+          .terms-section {
+            margin-top: 20px;
+          }
+        }
+
+        @media (min-width: 900px) and (max-width: 999px) {
+          .terms-section {
+            width: 90%;
+            margin-top: 40px;
+          }
+
+          .back-terms {
+            max-width: 100%;
+            font-size: 15px;
+          }
+
+          .terms-button-lower {
+            margin-top: 2.5rem;
+          }
+
+          .content {
+            padding-bottom: 0px;
+          }
+        }
+
+        @media (min-width: 900px) and (max-width: 999px) and (orientation: landscape) {
+          .terms-section {
+            margin-top: 20px;
+          }
+        }
+
+        @media (min-width: 900px) and (max-width: 1290px) {
+          .terms-section {
+            width: 90%;
+          }
+
+          .back-terms {
+            max-width: 100%;
+          }
+        }
+
+        /* Desktop */
+        @media (min-width: 1000px) and (orientation: portrait) {
+          .content {
+            padding-bottom: 0px;
+          }
+
+          .terms-button-lower {
+            margin-top: 3rem;
+          }
+
+          .back-terms {
+            font-size: 15px;
+          }
+        }
+
+        @media (min-width: 1000px) and (orientation: landscape) {
+          .content {
+            padding-bottom: 0px;
+          }
+
+          .terms-button-lower {
+            margin-top: 3rem;
+          }
+
+          .terms-section {
+            margin-top: 20px;
+          }
+        }
+
+        @media (min-width: 1000px) and (max-width: 1269px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 1270px) and (max-width: 1389px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 1390px) and (max-width: 1589px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 16px;
+          }
+
+          .back-terms {
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 1590px) and (max-width: 1909px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 17px;
+          }
+
+          .back-terms {
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 1910px) and (max-width: 2549px) and (orientation: landscape) {
+          .back-terms {
+            font-size: 16px;
+          }
+        }
+
+        /* 2K Display */
+        @media (min-width: 2550px) {
+          .terms-section {
+            width: 1000px;
+            font-size: 20px;
+          }
+
+          .back-terms {
+            width: 1000px;
+            font-size: 17px;
+          }
+
+          .terms-button {
+            font-size: 20px;
+          }
+        }
+
+        @media (min-width: 2550px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 20px;
+          }
+
+          .back-terms {
+            font-size: 17px;
+          }
+        }
+
+        /* 4K Display */
+        @media (min-width: 3430px) {
+          .terms-section {
+            width: 1200px;
+            font-size: 24px;
+          }
+
+          .back-terms {
+            width: 1200px;
+            font-size: 24px;
+          }
+
+          .terms-button {
+            font-size: 28px;
+            max-width: 350px;
+            padding: 1.3rem 50px;
+          }
+        }
+
+        @media (min-width: 3430px) and (orientation: landscape) {
+          .terms-button {
+            font-size: 28px;
+            max-width: 350px;
+            padding: 1.3rem 50px;
+          }
+
+          .back-terms {
+            font-size: 24px;
+          }
+        }
