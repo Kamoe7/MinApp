@@ -1,0 +1,198 @@
+.footer {
+  margin-top: auto;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 15px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 20;
+}
+
+.custom-line{
+    background-color: white;
+    height: 1px;
+    border: none;
+    margin: 0px 90px;
+}
+
+.footer-div {
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+  height: 12rem;
+}
+
+.footer-menu  {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu > a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.copyright-text {
+  color: white;
+  font-size: 15px;
+}
+
+.footer--lettafaktura-text {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.footer--text-section {
+  padding-top: 4rem;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin: auto;
+}
+
+@media (max-width: 675px) {
+  .footer--text-section {
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-copyright {
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    width: 85%;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer,
+  .copyright-text {
+    font-size: 18px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-div {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .footer--text-section {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 1000px) and (orientation: portrait) {
+  .footer,
+  .copyright-text {
+    font-size: 18px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 16px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1270px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 15px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1390px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 16px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1590px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 17px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1910px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 18px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 34px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 2550px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 20px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 38px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 3430px) and (orientation: landscape) {
+  .footer,
+  .copyright-text {
+    font-size: 28px;
+  }
+
+  .footer--lettafaktura-text {
+    font-size: 44px;
+    font-weight: 500;
+  }
+}
