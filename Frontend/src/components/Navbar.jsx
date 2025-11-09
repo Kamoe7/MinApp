@@ -2,18 +2,19 @@
 
 import { useState } from 'react';
 import '../css/NavBar.css';
+import { useLanguage } from './LanguageProvider';
 
 
 export default function NavBar() {
-  const [lang, setLang] = useState('sv');
   const [showDropdown, setShowDropDown] = useState(false);
   const [showMobileMenu,setShowMobileMenu] = useState(false)
+  const {language, toggleLanguage,t } = useLanguage();
   
-  const flag = lang === 'sv'
+  const flag = language === 'sv'
     ? 'https://storage.123fakturere.no/public/flags/SE.png'
     : 'https://storage.123fakturere.no/public/flags/GB.png';
 
-  const langText = lang === 'sv' ? 'Svenska' : 'English';
+  const langText = language === 'sv' ? 'Svenska' : 'English';
 
   return (
     <nav className="navbar">
@@ -38,11 +39,11 @@ export default function NavBar() {
 
             <ul className="menu-bar">
               <div className='menu-list'>
-                <a href="#" className='menu-list'>Hem</a>
-                <a href="#" className='menu-list'>Beställ</a>
-                <a href="#" className='menu-list'>Våra kunder</a>
-                <a href="#" className='menu-list'>Om oss</a>
-                <a href="#" className='menu-list'>Kontakta oss</a>
+                <a href="#" className='menu-list'>{t('nav.home')}</a>
+                <a href="#" className='menu-list'>{t('nav.order')}</a>
+                <a href="#" className='menu-list'>{t('nav.customers')}</a>
+                <a href="#" className='menu-list'>{t('nav.about')}</a>
+                <a href="#" className='menu-list'>{t('nav.contact')}</a>
               </div>
 
               <div className='lang-switch-wrapper '>
@@ -60,11 +61,15 @@ export default function NavBar() {
 
                      <div className='dropdown-menu'>
                     <div className='dropdown-item'
-                      onClick={(e) =>{
+                      onClick={(e) => {
                         e.stopPropagation();
-                        setLang('sv');
+                        if(language!=='sv'){
+                          toggleLanguage();
+                        }
                         setShowDropDown(false);
-                      }}
+                      }
+                      
+                      }
                     >
                       <span className='dropdown-lang-name'>Svenska</span>
                      
@@ -80,7 +85,9 @@ export default function NavBar() {
                       <div className='dropdown-item'
                         onClick={(e)=>{
                           e.stopPropagation();
-                          setLang('en');
+                          if (language !=='en'){
+                            toggleLanguage();
+                          }
                           setShowDropDown(false);
                         }}>
                           <span className='dropdown-lang-name'>English</span>
@@ -123,7 +130,9 @@ export default function NavBar() {
                     className='dropdown-item'
                     onClick={(e) => {
                       e.stopPropagation();
-                      setLang('sv');
+                      if(language !=='sv'){
+                        toggleLanguage();
+                      }
                       setShowDropDown(false);
                     }}
                   >
@@ -139,7 +148,9 @@ export default function NavBar() {
                     className='dropdown-item'
                     onClick={(e) => {
                       e.stopPropagation();
-                      setLang('en');
+                      if(language !== 'en'){
+                        toggleLanguage();
+                      }
                       setShowDropDown(false);
                     }}
                   >
@@ -157,11 +168,11 @@ export default function NavBar() {
           {/*for mobile humberger */}
               {showMobileMenu && (
                 <div className='mobile-menu-dropdown'>
-                  <a href='#' onClick={() => setShowMobileMenu(false)}>Hem</a>
-                  <a href="#" onClick={() => setShowMobileMenu(false)}>Beställ</a>
-                  <a href="#" onClick={() => setShowMobileMenu(false)}>Våra kunder</a>
-                  <a href="#" onClick={() => setShowMobileMenu(false)}>Om oss</a>
-                  <a href="#" onClick={() => setShowMobileMenu(false)}>Kontakta oss</a>
+                  <a href='#' onClick={() => setShowMobileMenu(false)}>{t('nav.home')}</a>
+                  <a href="#" onClick={() => setShowMobileMenu(false)}>{t('nav.order')}</a>
+                  <a href="#" onClick={() => setShowMobileMenu(false)}>{t('nav.customers')}</a>
+                  <a href="#" onClick={() => setShowMobileMenu(false)}>{t('nav.about')}</a>
+                  <a href="#" onClick={() => setShowMobileMenu(false)}>{t('nav.contact')}</a>
                       
                 </div>
               )}

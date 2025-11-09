@@ -5,10 +5,12 @@ import LoginBox from './components/LoginBox'
 import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Terms from './pages/Terms.jsx'
+import LanguageProvider from './components/LanguageProvider.jsx'
 
 function App() {
   return (
-    <Router>
+    <LanguageProvider>
+       <Router>
       <div>
         <div className='background'>
           <div className='bg-img'></div>
@@ -28,6 +30,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </LanguageProvider>
+   
   )
 }
 

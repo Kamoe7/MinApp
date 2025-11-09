@@ -7,10 +7,12 @@
     position: relative;
     margin: auto;
     margin-top: 5rem;
-    width: 70%;
+    width: 90%;
     padding-bottom: 0.25rem;  /*bottom padding */
 }
-
+.terms-condition{
+  font-size: 16px;
+}
 .terms-top-text {
     margin-bottom: 3rem;
     text-align: center;
@@ -68,6 +70,9 @@
 
 /* Mobile */
         @media (max-width: 674px) {
+          .terms-condition{
+            font-size: 14px;
+          }
           .terms-section {
             margin-top: 20px;
             width: 90%;
@@ -110,6 +115,9 @@
             width: 90%;
             margin-top: 40px;
           }
+          .terms-condition{
+            font-size: 14px;
+          }
 
           .back-terms {
             max-width: 100%;
@@ -131,6 +139,7 @@
         @media (min-width: 675px) and (max-width: 899px) and (orientation: landscape) {
           .terms-section {
             margin-top: 20px;
+            width: 70%;
           }
         }
 
