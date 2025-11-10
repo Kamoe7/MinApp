@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-import psycopg2
-from psycopg2.extras import RealDictCursor
+import psycopg
+from psycopg.rows import dict_row
 from utils.database import get_connection
 from middleware.auth import token_required
 
@@ -72,7 +72,7 @@ def get_product(current_user, product_id):
     """Get single product by ID """
     try:
         conn = get_connection()
-        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor = conn.cursor(row_factory=dict_row)
         cursor.execute("SELECT * FROM products WHERE id = %s", (product_id,))
         product = cursor.fetchone()
         cursor.close()
@@ -100,7 +100,7 @@ def create_product(current_user):
 
     try:
         conn = get_connection()
-        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor = conn.cursor(row_factory=dict_row)
 
         cursor.execute("""
             INSERT INTO products (article_no, product_service, in_price, price, unit, in_stock, description)
@@ -123,7 +123,7 @@ def create_product(current_user):
 
         return jsonify(dict(new_product)), 201
 
-    except psycopg2.IntegrityError:
+    except psycopg.IntegrityError:
         return jsonify({"error": "Article number already exists"}), 400
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -140,7 +140,7 @@ def update_product(current_user, product_id):
 
     try:
         conn = get_connection()
-        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor = conn.cursor(row_factory=dict_row)
 
         # Build dynamic update query
         update_fields = []
@@ -216,7 +216,7 @@ def update_product_field(current_user, product_id):
 
     try:
         conn = get_connection()
-        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor = conn.cursor(row_factory=dict_row)
 
         column_name = allowed_fields[field]
         print(f"Column name: {column_name}")
@@ -271,7 +271,7 @@ def update_product_field(current_user, product_id):
 
         return jsonify(dict(updated_product)), 200
 
-    except psycopg2.Error as e:
+    except psycopg.Error as e:
         error_msg = f"Database error: {str(e)}"
         print(f"PSYCOPG2 ERROR: {error_msg}")
         print(f"Error code: {e.pgcode if hasattr(e, 'pgcode') else 'N/A'}")

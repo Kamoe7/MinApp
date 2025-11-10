@@ -1,8 +1,11 @@
 
-import psycopg2
-from psycopg2.extras import RealDictCursor
+import psycopg
+from psycopg.rows import dict_row
 from config import Config
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
     
     
 def get_connection():
@@ -11,18 +14,22 @@ def get_connection():
         print(f"Host:{Config.DB_HOST}")
         print(f"DB:{Config.DB_NAME}")
         print(f"User:{Config.DB_USER}")
-        conn = psycopg2.connect(
-            host=os.getenv('DB_HOST', 'localhost'),
-            database=os.getenv('DB_NAME'),
-            user=os.getenv('DB_USER'),
-            password=os.getenv('DB_PASSWORD'),
-            port=os.getenv('DB_PORT'),
-            cursor_factory=RealDictCursor
+        
+        dsn = (
+            f"postgresql://"
+            f"{Config.DB_USER}:{Config.DB_PASSWORD or ''}"
+            f"@{Config.DB_HOST}:{Config.DB_PORT or 5432}"
+            f"/{Config.DB_NAME}"
+        )
+        conn = psycopg.connect(
+            dsn,
+            row_factory=dict_row
         )
         print("Connection Successful!")
 
         return conn
-    except psycopg2.OperationalError as e:
+    
+    except psycopg.OperationalError as e:
         print(f"DB connction failed")
         print(f"Error:{e}")
     except Exception as e:
