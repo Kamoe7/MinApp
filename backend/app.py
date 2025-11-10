@@ -23,8 +23,13 @@ def create_app():
 
 
 app = create_app()
+print("Initializing DB on Render...")
+init_db()
+print("DB initialized successfully!")
+
+
 if __name__ =='__main__':
-    from models import init_db
-    init_db()
+    # from models import init_db
+    # init_db()
     app.run(debug=True,port=5000)
         
