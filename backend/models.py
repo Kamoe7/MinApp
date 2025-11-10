@@ -64,7 +64,7 @@ def init_db():
 
         # Insert default user
         hashed_password = generate_password_hash(
-            'admin777', method='pbkdf2:sha256')
+            'admin777')
         cur.execute('''
             INSERT INTO users (email, password_hash)
             VALUES (%s, %s)
