@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, Search, Plus, Printer, Settings, ChevronDown, MoreVertical, Edit2, Save } from 'lucide-react';
 import '../css/pricelist.css'
 import { useNavigate } from 'react-router-dom';
-const API_URL = 'http://localhost:5000/api/pricelist';
+const API_URL = 'https://minapp-backend.onrender.com/api/pricelist';
 
 
 const getAuthToken = () => {
