@@ -146,7 +146,7 @@ img {
 }
 
 /*for tablet */
-@media (max-width:1124px)  {
+@media (max-width:1200px)  {
   .nav-header{
     width: 75%;
     padding-top: 2.5rem;
