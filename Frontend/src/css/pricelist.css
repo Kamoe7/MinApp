@@ -46,7 +46,7 @@ body {
     padding: 8px;
     border-radius: 4px;
     transition: background 0.2s;
-    display: none; /* Hidden by default on desktop/tablet */
+    display: none; 
 }
 
 .menu-btn:hover {
@@ -112,7 +112,7 @@ body {
     overflow-y: auto;
     transition: transform 0.3s;
     z-index: 100;
-    transform: translateX(0); /* Always visible on desktop/tablet */
+    transform: translateX(0); 
 }
 
 .sidebar h3 {
@@ -336,24 +336,24 @@ tr:hover {
 }
 
 
-/* Mobile View (below 768px) */
+/* Mobile View */
 @media (max-width: 768px) {
-    /* Show hamburger menu on mobile */
+
     .menu-btn {
         display: block;
     }
 
-    /* Hide sidebar by default on mobile */
+   
     .sidebar {
         transform: translateX(-100%);
     }
 
-    /* Show sidebar when mobile-open class is added */
+  
     .sidebar.mobile-open {
         transform: translateX(0);
     }
 
-    /* Remove sidebar margin on mobile */
+    
     .main-content {
         margin-left: 0;
     }
@@ -387,7 +387,7 @@ tr:hover {
         justify-content: center;
     }
 
-    /* Hide most columns on mobile */
+    
     th:nth-child(3),
     th:nth-child(4),
     th:nth-child(5),
@@ -402,7 +402,7 @@ tr:hover {
     }
 }
 
-/* Tablet Landscape (769px - 1024px, landscape) */
+/* Tablet Landscape */
 @media (orientation: landscape) and (max-width: 1024px) and (min-width: 769px) {
     th:nth-child(7),
     td:nth-child(7) {

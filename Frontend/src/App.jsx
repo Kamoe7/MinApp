@@ -13,18 +13,17 @@ const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   
   if (!token) {
-    // If not logged in, redirect to login page
     return <Navigate to="/login" replace />;
   }
   
   return children;
 };
 
-// Layout wrapper component to conditionally show navbar and background
+
 const Layout = ({ children }) => {
   const location = useLocation();
   
-  // Routes that should NOT have navbar and background
+ 
   const routesWithoutLayout = ['/pricelist'];
   
   const showLayout = !routesWithoutLayout.includes(location.pathname);
@@ -53,13 +52,13 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            {/* Login Route */}
+        
             <Route path="/login" element={<LoginBox />} />
             
-            {/* Terms Route */}
+            
             <Route path="/terms" element={<Terms />} />
             
-            {/* Protected Pricelist Route (no navbar/background) */}
+      
             <Route 
               path="/pricelist" 
               element={
@@ -69,10 +68,10 @@ function App() {
               } 
             />
             
-            {/* Default route - redirect to login */}
+        
             <Route path="/" element={<Navigate to="/login" replace />} />
             
-            {/* Catch all - redirect to login */}
+     
             <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
         </Layout>
