@@ -52,6 +52,9 @@
     .login-password {
       margin-top: 1.25rem;
     }
+    .error-messages{
+      color:red;
+    }
 
     .login-email-label,
     .login-password-label {
