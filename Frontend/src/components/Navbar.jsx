@@ -1,7 +1,7 @@
 
 
 import { useState } from 'react';
-import '../css/NavBar.css';
+import '../css/Navbar.css';
 import { useLanguage } from './LanguageProvider';
 
 
