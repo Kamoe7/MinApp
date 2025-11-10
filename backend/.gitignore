@@ -20,7 +20,9 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
+node_modules
+package.json
+package-lock
 # Virtual environments
 venv/
 .venv/
@@ -38,4 +40,11 @@ Thumbs.db
 # Environment variables
 .env
 
-config.py
+
+venv
+Flask
+flask-cors
+psycopg2-binary
+python-dotenv
+PyJWT
+Werkzeug
