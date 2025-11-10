@@ -11,15 +11,9 @@ load_dotenv()
 def get_connection():
     try:
         print('Connecting to DB')
-        print(f"Host:{Config.DB_HOST}")
-        print(f"DB:{Config.DB_NAME}")
-        print(f"User:{Config.DB_USER}")
         
         dsn = (
-            f"postgresql://"
-            f"{Config.DB_USER}:{Config.DB_PASSWORD or ''}"
-            f"@{Config.DB_HOST}:{Config.DB_PORT or 5432}"
-            f"/{Config.DB_NAME}"
+            Config.DATABASE_URL
         )
         conn = psycopg.connect(
             dsn,

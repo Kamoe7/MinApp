@@ -5,11 +5,13 @@ load_dotenv()
 
 
 class Config:
-    DB_HOST = os.getenv('DB_HOST', 'localhost')
-    DB_NAME = os.getenv('DB_NAME', 'translations_db')
-    DB_USER = os.getenv('DB_USER', 'postgres')
-    DB_PASSWORD = os.getenv('DB_PASSWORD')
-    DB_PORT = os.getenv('DB_PORT')
+    # DB_HOST = os.getenv('DB_HOST', 'localhost')
+    # DB_NAME = os.getenv('DB_NAME', 'translations_db')
+    # DB_USER = os.getenv('DB_USER', 'postgres')
+    # DB_PASSWORD = os.getenv('DB_PASSWORD')
+    # DB_PORT = os.getenv('DB_PORT')
+    
+    DATABASE_URL = os.getenv('DATABASE_URL')
 
     # JWT
     SECRET_KEY = os.getenv(
@@ -19,4 +21,5 @@ class Config:
     CACHE_DURATION = 300  # 5 minutes
 
     # CORS
-    CORS_ORIGINS = ['http://localhost:5173', 'http://localhost:3000']
+    CORS_ORIGINS = ['http://localhost:5173',
+                    'http://localhost:3000', 'https://minapp-81ss.onrender.com']
