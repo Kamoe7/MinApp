@@ -1,7 +1,7 @@
 from flask import Blueprint,request,jsonify
 from werkzeug.security import check_password_hash
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta,timezone
 from config import Config
 from utils.database import get_connection
 from middleware.auth import token_required
@@ -41,9 +41,10 @@ def login():
         token = jwt.encode({
             'user_id':user['id'],
             'email':user['email'],
-            'exp':datetime.utcnow() + timedelta(hours=24)
+            'exp':datetime.now(timezone.utc) + timedelta(hours=24)
             
         },Config.SECRET_KEY,algorithm='HS256')
+        print(f"key:{Config.SECRET_KEY}")
         
         return jsonify({
             'message':'Login Successful',
