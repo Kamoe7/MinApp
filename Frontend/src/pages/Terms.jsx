@@ -40,10 +40,6 @@ const Terms = () => {
                     {t('terms.button')}
                 </button>
             </div>
-
- 
-
-
         </div>
        
  
