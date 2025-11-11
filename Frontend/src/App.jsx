@@ -8,7 +8,7 @@ import LanguageProvider  from './components/LanguageProvider';
 import './App.css';
 import Footer from './components/Footer'
 
-// Protected Route Component
+
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   
@@ -29,11 +29,10 @@ const Layout = ({ children }) => {
   const showLayout = !routesWithoutLayout.includes(location.pathname);
   
   if (!showLayout) {
-    // For pricelist and other admin pages, render without layout
+
     return <>{children}</>;
   }
-  
-  // For public pages (login, terms, etc.), render with layout
+
   return (
     <>
       <div className='background'>
