@@ -19,14 +19,14 @@ const Terms = () => {
                 <h1 className='terms-heading head-mob-md'>{t('terms.title')}</h1>
              </div>
 
-             {/* button below header */}
+       
              <div style={{textAlign: 'center' , marginBlock: '2rem'}}>
                 <button className='terms-button' onClick={handleGoBack}>
                    {t('terms.button')}
                 </button>
              </div>
 
-                {/* white box content */}
+          
                 <div className='terms-table'>
                     <div className='terms-condition'>
                        {parse(t('terms.content'))}
