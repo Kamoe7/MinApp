@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, Search, Plus, Printer, Settings, ChevronDown, MoreVertical, Edit2, Save } from 'lucide-react';
 import '../css/pricelist.css'
 import { useNavigate } from 'react-router-dom';
-const API_URL = 'http://localhost:5000/api/pricelist';
+const API_URL = `${import.meta.env.VITE_API_URL}/api/pricelist`;
 
 
 const getAuthToken = () => {
