@@ -48,7 +48,7 @@ const LanguageProvider = ({children}) => {
     const fetchTranslations = async (lang) =>{
         try {
             console.log(`Fetching translations for: ${lang}`); 
-             const response = await fetch(`http://localhost:5000/api/translations/${lang}`);
+             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/translations/${lang}`);
               //const response = await fetch(`https://minapp-backend.onrender.com/api/translations/${lang}`);
             if (!response.ok){
                 throw new Error(`HTTP ERROR!! : ${response.status}`);

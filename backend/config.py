@@ -22,4 +22,5 @@ class Config:
 
     # CORS
     CORS_ORIGINS = ['http://localhost:5173',
-                    'http://localhost:3000']
+                    'http://localhost:3000',
+                    'http://ec2-18-196-46-150.eu-central-1.compute.amazonaws.com']
