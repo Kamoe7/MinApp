@@ -113,7 +113,7 @@ export default function NavBar() {
               </div>
           </ul>
 
-            {/* Mobile/Tablet Language Switcher */}
+  
             <div className="lang-switch-wrapper mobile-lang">
               <div className="lang-switch" onClick={() => setShowDropDown(v => !v)}>
                 <span className="lang-text mobile-lang-text">{langText}</span>
@@ -165,7 +165,7 @@ export default function NavBar() {
               )}
             </div>
           </div>
-          {/*for mobile humberger */}
+
               {showMobileMenu && (
                 <div className='mobile-menu-dropdown'>
                   <a href='#' onClick={() => setShowMobileMenu(false)}>{t('nav.home')}</a>

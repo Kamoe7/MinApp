@@ -22,4 +22,4 @@ class Config:
 
     # CORS
     CORS_ORIGINS = ['http://localhost:5173',
-                    'http://localhost:3000', 'https://minapp-81ss.onrender.com']
+                    'http://localhost:3000']

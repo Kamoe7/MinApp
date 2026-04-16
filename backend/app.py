@@ -10,7 +10,7 @@ from translations.routes import translations_bp
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__,static_folder='../Frontend/build',static_url_path='')
     app.config['SECRET_KEY'] = Config.SECRET_KEY
     
     CORS(app,origins=Config.CORS_ORIGINS)
@@ -23,7 +23,7 @@ def create_app():
 
 
 app = create_app()
-print("Initializing DB on Render...")
+# print("Initializing DB on Render...")
 init_db()
 print("DB initialized successfully!")
 

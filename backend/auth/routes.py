@@ -1,3 +1,4 @@
+from werkzeug.security import generate_password_hash
 from flask import Blueprint,request,jsonify
 from werkzeug.security import check_password_hash
 import jwt
@@ -65,3 +66,35 @@ def login():
 @token_required
 def verify_token(current_user):
     return jsonify({'Valid':True,'user_id':current_user}),200
+
+
+@auth_bp.route('/register', methods=['POST'])
+def register():
+    try:
+        data = request.get_json()
+
+        email = data.get('email')
+        password = data.get('password')
+
+        if not email or not password:
+            return jsonify({'Error': 'Email and password required'}), 400
+
+        hashed_password = generate_password_hash(password)
+
+        conn = get_connection()
+        cur = conn.cursor()
+
+        cur.execute(
+            "INSERT INTO users (email, password_hash) VALUES (%s, %s)",
+            (email, hashed_password)
+        )
+
+        conn.commit()
+        cur.close()
+        conn.close()
+
+        return jsonify({'message': 'User created successfully'}), 201
+
+    except Exception as e:
+        print(f"Register error: {e}")
+        return jsonify({'Error': 'Register failed'}), 500
